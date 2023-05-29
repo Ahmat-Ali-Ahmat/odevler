@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(170, 237, 215)">
+    <form action="getter.php" method="get" target="_blank">
+      <h1>Homework 4</h1>
+      <fieldset>
+        <p>form with method get and target _blank</p>
+        <label for="First-name">First-name:</label>
+        <input type="text" /><br /><br />
+        <label for="last-name">last-name:</label>
+        <input type="text" /><br /><br />
+        <input type="submit" />
+      </fieldset>
+      <br /><br />
+    </form>
+    <form action="getter.php" method="dialog" target="_parent">
+      <fieldset>
+        <p>form with method dialog and target _parent</p>
+        <label for="First-name">First-name:</label>
+        <input type="text" /><br /><br />
+        <label for="last-name">last-name:</label>
+        <input type="text" /><br /><br />
+        <input type="submit" />
+      </fieldset>
+      <br /><br />
+    </form>
+
+    <form action="getter.php" method="post" target="_self">
+      <fieldset>
+        <p>form with method post and target _self</p>
+        <label for="First-name">First-name:</label>
+        <input type="text" /><br /><br />
+        <label for="last-name">last-name:</label>
+        <input type="text" /><br /><br />
+        <input type="submit" />
+      </fieldset>
+      <br /><br />
+    </form>
+
+    <form action="getter.php" method="get" target="_top">
+      <fieldset>
+        <p>form with method get again but the target is _top</p>
+        <label for="First-name">First-name:</label>
+        <input type="text" /><br /><br />
+        <label for="last-name">last-name:</label>
+        <input type="text" /><br /><br />
+        <input type="submit" />
+      </fieldset>
+    </form>
+    <br /><br />
+
+    <p>this is our canvas</p>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #d3d3d3"
+    >
+      Your browser does not support the HTML canvas tag.</canvas
+    >
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      // Create gradient
+      var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "black");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+  </body>
+</html>
